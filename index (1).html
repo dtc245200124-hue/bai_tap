@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng CSS vào trang HTML</title>
+
+    <!-- Phần 2: Internal CSS -->
+    <style>
+        .internal-example {
+            color: #1d4ed8;
+        }
+    </style>
+
+    <!-- Phần 3: External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>Nhúng CSS vào trang HTML</h1>
+
+        <!-- Phần 1: Inline CSS -->
+        <section class="example inline-section">
+            <h2>Phần 1: Inline-style</h2>
+            <p style="color: #c2410c;">
+                Đây là đoạn văn được đổi màu bằng inline-style.
+            </p>
+        </section>
+
+        <!-- Phần 2: Internal CSS -->
+        <section class="example internal-section">
+            <h2>Phần 2: Internal-style</h2>
+            <p class="internal-example">
+                Đây là đoạn văn được đổi màu bằng internal-style.
+            </p>
+        </section>
+
+        <!-- Phần 3: External CSS -->
+        <section class="example external-section">
+            <h2>Phần 3: External-style</h2>
+            <p class="external-example">
+                Đây là đoạn văn được đổi màu bằng external-style.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
