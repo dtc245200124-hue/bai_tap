@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang xem hoạt hình trực tuyến thân thiện với trẻ em.">
+    <title>KiddoToon - Xem hoạt hình trực tuyến</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="#home" aria-label="KiddoToon trang chủ">
+                <span class="logo-mark">K</span>
+                <span>Kiddo<span>Toon</span></span>
+            </a>
+            <nav class="main-nav" aria-label="Điều hướng chính">
+                <a class="active" href="#home">Trang chủ</a>
+                <a href="#new">Mới cập nhật</a>
+                <a href="#popular">Xem nhiều</a>
+                <a href="#categories">Thể loại</a>
+            </nav>
+            <button class="menu-toggle" type="button" aria-label="Mở menu">☰</button>
+        </div>
+    </header>
+
+    <main id="home" class="page-content">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">KHOẢNH KHẮC VUI HỌC MỖI NGÀY</p>
+                <h1>Thế giới hoạt hình<br><span>đầy màu sắc</span></h1>
+                <p class="hero-copy">Những bộ phim được chọn lọc cho gia đình. Dễ xem, an toàn và luôn sẵn sàng cho giờ giải trí.</p>
+            </div>
+            <div class="hero-shape" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="cloud cloud-one"></div>
+                <div class="cloud cloud-two"></div>
+                <div class="hill"></div>
+                <div class="hero-star">★</div>
+            </div>
+        </section>
+
+        <section class="catalog-section" id="new">
+            <div class="section-title-row">
+                <div>
+                    <p class="eyebrow">DANH SÁCH PHIM</p>
+                    <h2>Chọn một bộ phim để xem</h2>
+                </div>
+                <label class="search-field">
+                    <span>⌕</span>
+                    <input id="movie-search" type="search" placeholder="Tìm theo tên phim..." aria-label="Tìm phim theo tên">
+                </label>
+            </div>
+
+            <div class="watch-layout">
+                <aside class="movie-sidebar" aria-label="Danh sách phim">
+                    <div class="sidebar-heading">
+                        <strong>Phim nổi bật</strong>
+                        <span id="movie-count">3 phim</span>
+                    </div>
+                    <div id="movie-list" class="movie-list">
+                        <button class="movie-item selected" type="button" data-index="0" data-search="chú sâu tò mò hoạt hình vui học">
+                            <span class="movie-thumb thumb-one">▶</span>
+                            <span class="movie-info"><strong>Chú Sâu Tò Mò</strong><small>Hoạt hình · 12 phút</small></span>
+                        </button>
+                        <button class="movie-item" type="button" data-index="1" data-search="khu rừng xanh phiêu lưu thiên nhiên">
+                            <span class="movie-thumb thumb-two">▶</span>
+                            <span class="movie-info"><strong>Khu Rừng Xanh</strong><small>Phiêu lưu · 8 phút</small></span>
+                        </button>
+                        <button class="movie-item" type="button" data-index="2" data-search="big buck bunny hoạt hình youtube">
+                            <span class="movie-thumb thumb-three">▶</span>
+                            <span class="movie-info"><strong>Big Buck Bunny</strong><small>Hài hước · YouTube</small></span>
+                        </button>
+                    </div>
+                    <p id="no-results" class="no-results" hidden>Không tìm thấy phim phù hợp.</p>
+                </aside>
+
+                <section class="player-panel" aria-label="Trình phát phim">
+                    <div id="player-container" class="player-container">
+                        <video id="video-player" controls preload="metadata" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='500' viewBox='0 0 900 500'%3E%3Crect width='900' height='500' fill='%23d8f3dc'/%3E%3Ccircle cx='700' cy='120' r='70' fill='%23ffd166'/%3E%3Cpath d='M0 390 Q180 250 370 380 T900 350 V500 H0Z' fill='%2357cc99'/%3E%3C/svg%3E">
+                            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ thẻ video.
+                        </video>
+                        <template id="youtube-player-template">
+                            <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ?rel=0&modestbranding=1" title="Big Buck Bunny" allowfullscreen></iframe>
+                        </template>
+                    </div>
+                    <div class="player-details">
+                        <div>
+                            <p class="eyebrow">ĐANG PHÁT</p>
+                            <h2 id="player-title">Chú Sâu Tò Mò</h2>
+                            <p id="player-description">Một chuyến khám phá nhỏ trong khu vườn xanh, nơi mỗi ngày đều có một điều mới để học.</p>
+                        </div>
+                        <span class="quality-badge">HD 720p</span>
+                    </div>
+                    <div class="player-meta"><span>♡ 1.2K lượt thích</span><span>● Nội dung thân thiện gia đình</span></div>
+                </section>
+            </div>
+        </section>
+
+        <section class="feature-row" id="popular">
+            <div class="feature-card">
+                <span class="feature-icon">◈</span>
+                <div><strong>Nội dung chọn lọc</strong><p>Phim phù hợp cho giờ giải trí của cả gia đình.</p></div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">▶</span>
+                <div><strong>Chất lượng HD</strong><p>Hình ảnh rõ nét, đường truyền ổn định.</p></div>
+            </div>
+            <div class="feature-card" id="categories">
+                <span class="feature-icon">★</span>
+                <div><strong>Luôn cập nhật</strong><p>Thêm những câu chuyện mới mỗi tuần.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 KiddoToon · Góc xem hoạt hình an toàn cho gia đình</p>
+        <a href="#home">Về đầu trang ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
