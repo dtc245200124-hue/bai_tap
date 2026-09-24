@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background: #eef2f7;
+}
+
+body {
+    margin: 0;
+    padding: 48px 24px;
+}
+
+.page {
+    max-width: 760px;
+    min-height: 560px;
+    margin: 0 auto;
+    padding: 34px;
+    background: #ffffff;
+    border: 1px solid #d8e0e8;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.1);
+}
+
+h1 {
+    margin: 0;
+    color: #173b57;
+    font-size: 2rem;
+}
+
+.intro {
+    margin: 8px 0 28px;
+    color: #667781;
+}
+
+#menu,
+#menu ul,
+#menu li {
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    position: relative;
+    min-height: 160px;
+    width: 190px;
+    z-index: 2;
+}
+
+#menu li {
+    position: relative;
+    width: 190px;
+    min-height: 42px;
+    list-style: none;
+    background-color: #173b57;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    line-height: 42px;
+    cursor: pointer;
+}
+
+#menu > ul > li:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+#menu > ul > li:last-child {
+    border-radius: 0 0 8px 8px;
+    border-bottom: 0;
+}
+
+#menu li a {
+    display: block;
+    min-height: 42px;
+    padding: 0 18px;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#menu li:hover,
+#menu li:focus-within {
+    background-color: #c94c4c;
+}
+
+/* Ẩn submenu bên phải menu chính. */
+#menu ul ul {
+    position: absolute;
+    top: 0;
+    left: 190px;
+    visibility: hidden;
+    width: 250px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+/* Hiển thị submenu khi rê chuột hoặc dùng bàn phím. */
+#menu ul li:hover > ul,
+#menu ul li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#menu ul ul li {
+    width: 250px;
+    background-color: #2f6b85;
+}
+
+#menu ul ul li:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+#menu ul ul li:last-child {
+    border-radius: 0 0 8px 8px;
+    border-bottom: 0;
+}
+
+#menu ul ul li:hover,
+#menu ul ul li:focus-within {
+    background-color: #d9784f;
+}
+
+.note {
+    max-width: 440px;
+    margin: 42px 0 0;
+    padding: 18px 20px;
+    background: #f5f8fb;
+    border-left: 4px solid #2f6b85;
+    border-radius: 6px;
+}
+
+.note h2 {
+    margin: 0 0 6px;
+    color: #173b57;
+    font-size: 1.05rem;
+}
+
+.note p {
+    margin: 0;
+    color: #596b75;
+    line-height: 1.6;
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    .page {
+        padding: 24px;
+    }
+
+    #menu,
+    #menu li {
+        width: 100%;
+    }
+
+    #menu ul ul {
+        position: static;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transform: none;
+    }
+
+    #menu ul li:hover > ul,
+    #menu ul li:focus-within > ul {
+        max-height: 300px;
+    }
+
+    #menu ul ul li {
+        width: 100%;
+        padding-left: 16px;
+        background-color: #2f6b85;
+    }
+}
