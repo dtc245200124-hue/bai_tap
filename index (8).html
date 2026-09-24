@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Lite UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <a class="brand" href="#home" aria-label="Trang chủ Facebook">f</a>
+        <label class="search-box">
+            <span class="search-icon">⌕</span>
+            <input type="search" placeholder="Tìm kiếm trên Facebook" aria-label="Tìm kiếm">
+        </label>
+        <nav class="header-actions" aria-label="Điều hướng tài khoản">
+            <a href="#home">Trang chủ</a>
+            <a class="avatar avatar-small" href="#profile">A</a>
+            <a class="header-icon" href="#messages" aria-label="Tin nhắn">▣</a>
+            <a class="header-icon" href="#notifications" aria-label="Thông báo">●</a>
+        </nav>
+    </header>
+
+    <div class="app-shell" id="home">
+        <aside class="sidebar sidebar-left" aria-label="Menu chính">
+            <a class="profile-link" href="#profile">
+                <span class="avatar">A</span>
+                <strong>Alex Nguyễn</strong>
+            </a>
+            <nav class="side-nav">
+                <a class="active" href="#home"><span>⌂</span> Bảng tin</a>
+                <a href="#friends"><span>♧</span> Bạn bè</a>
+                <a href="#groups"><span>▦</span> Nhóm</a>
+                <a href="#marketplace"><span>◇</span> Marketplace</a>
+                <a href="#watch"><span>▶</span> Video</a>
+                <a href="#memories"><span>◷</span> Kỷ niệm</a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <p class="side-label">Lối tắt</p>
+            <a class="shortcut" href="#design-group">Câu lạc bộ thiết kế</a>
+            <a class="shortcut" href="#book-group">Đọc sách mỗi ngày</a>
+        </aside>
+
+        <main class="feed" aria-label="Bảng tin">
+            <section class="stories-card" aria-label="Tin nổi bật">
+                <div class="section-heading">
+                    <h1>Tin nổi bật</h1>
+                    <a href="#all-stories">Xem tất cả</a>
+                </div>
+                <div class="stories-row">
+                    <a class="story story-create" href="#create-story">
+                        <span class="story-avatar avatar">+</span>
+                        <span>Tạo tin</span>
+                    </a>
+                    <a class="story story-one" href="#story-1"><span>Buổi sáng yên bình</span></a>
+                    <a class="story story-two" href="#story-2"><span>Cuối tuần của tôi</span></a>
+                    <a class="story story-three" href="#story-3"><span>Góc làm việc</span></a>
+                </div>
+            </section>
+
+            <section class="composer card" aria-label="Tạo bài viết">
+                <div class="composer-top">
+                    <span class="avatar">A</span>
+                    <button class="composer-input">Bạn đang nghĩ gì?</button>
+                </div>
+                <div class="composer-actions">
+                    <button><span class="live-dot"></span> Video trực tiếp</button>
+                    <button><span class="photo-icon">▣</span> Ảnh/video</button>
+                    <button><span class="smile-icon">☺</span> Cảm xúc</button>
+                </div>
+            </section>
+
+            <article class="post card">
+                <div class="post-header">
+                    <span class="avatar avatar-blue">M</span>
+                    <div>
+                        <strong>Minh Anh</strong>
+                        <p>2 giờ · Công khai</p>
+                    </div>
+                    <button class="more" aria-label="Tùy chọn bài viết">•••</button>
+                </div>
+                <p class="post-text">Một ngày mới bắt đầu bằng một tách cà phê và một danh sách nhỏ những việc cần làm. Chúc mọi người một ngày thật nhiều năng lượng.</p>
+                <div class="post-image post-image-sunrise" role="img" aria-label="Minh họa buổi sáng bên cửa sổ"></div>
+                <div class="post-stats"><span>♡ 128</span><span>24 bình luận · 8 lượt chia sẻ</span></div>
+                <div class="post-actions"><button>♡ Thích</button><button>◯ Bình luận</button><button>↗ Chia sẻ</button></div>
+            </article>
+
+            <article class="post card">
+                <div class="post-header">
+                    <span class="avatar avatar-green">T</span>
+                    <div>
+                        <strong>Tuấn Trần</strong>
+                        <p>5 giờ · Công khai</p>
+                    </div>
+                    <button class="more" aria-label="Tùy chọn bài viết">•••</button>
+                </div>
+                <p class="post-text">Đang tìm một vài gợi ý hay cho chuyến đi ngắn cuối tháng. Mọi người thường thích địa điểm nào?</p>
+                <div class="post-stats"><span>♡ 46</span><span>12 bình luận</span></div>
+                <div class="post-actions"><button>♡ Thích</button><button>◯ Bình luận</button><button>↗ Chia sẻ</button></div>
+            </article>
+        </main>
+
+        <aside class="sidebar sidebar-right" aria-label="Thông tin bên phải">
+            <div class="right-heading"><strong>Sinh nhật</strong><a href="#birthdays">Xem tất cả</a></div>
+            <p class="birthday"><span class="gift">▧</span> Hôm nay là sinh nhật của <strong>Hương</strong>.</p>
+            <div class="sidebar-divider"></div>
+            <div class="right-heading"><strong>Người liên hệ</strong><button aria-label="Tùy chọn liên hệ">•••</button></div>
+            <a class="contact" href="#contact-1"><span class="status-dot"></span><span class="avatar avatar-yellow">L</span><span>Lan Phạm</span></a>
+            <a class="contact" href="#contact-2"><span class="status-dot"></span><span class="avatar avatar-blue">K</span><span>Khánh Lê</span></a>
+            <a class="contact" href="#contact-3"><span class="status-dot"></span><span class="avatar avatar-purple">N</span><span>Ngọc Trần</span></a>
+            <a class="contact" href="#contact-4"><span class="status-dot offline"></span><span class="avatar avatar-green">P</span><span>Phương Mai</span></a>
+        </aside>
+    </div>
+</body>
+</html>
